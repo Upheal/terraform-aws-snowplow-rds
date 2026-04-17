@@ -148,3 +148,15 @@ variable "storage_type" {
   type        = string
   default     = "gp2"
 }
+
+variable "iops" {
+  description = "The amount of provisioned IOPS. Required when storage_type is `io1`, `io2` or `gp3` (when above the free tier threshold)."
+  type        = number
+  default     = null
+}
+
+variable "storage_throughput" {
+  description = "The storage throughput value for the DB instance, in MiB/s. Only valid for storage_type `gp3`."
+  type        = number
+  default     = null
+}

@@ -47,6 +47,8 @@ resource "aws_db_instance" "instance" {
   username = var.db_username
 
   storage_type          = var.storage_type
+  iops                  = var.iops
+  storage_throughput    = var.storage_throughput
   allocated_storage     = var.allocated_storage
   max_allocated_storage = var.max_allocated_storage
   storage_encrypted     = true
